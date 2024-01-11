@@ -1,0 +1,29 @@
+@api = https://8q1gf83458.execute-api.us-east-1.amazonaws.com
+
+GET {{api}}
+
+### create task
+POST {{api}}/tasks
+Content-Type: application/json
+
+{
+  "title": "my first task",
+  "description": "some first created",
+}
+
+### get tasks
+GET {{api}}/tasks
+
+### get single task
+GET {{api}}/tasks/5d29e74b-66f5-4d58-b42a-339e69f227f3
+
+### update single task
+PUT {{api}}/tasks/0c3378f1-d857-4db4-a283-e1ca2074ab2d
+Content-Type: application/json
+
+{
+  "done": true
+}
+
+### delete single task
+DELETE {{api}}/tasks/8f6c33e2-289b-4ee3-9a6a-6397592742de
